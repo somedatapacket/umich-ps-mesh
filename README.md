@@ -2,6 +2,8 @@
 This is the code and configuration repository for operation of the Perfsonar 4.0 access layer mesh of low-cost endpoints at the University of Michigan.
 ## Configuration details
 This mesh utilizes IP address authentication and requires DHCP reserved IP addresses delivered to each mesh endpoint. Mesh data is collected at the central measurement archive running in a MiServer VM. The central measurement archive aggregates the data from multiple meshes, including this one.
+
+The central measurement archive uses Certbot for SSL, and a cron job for certbot renew --quiet is set to run twice daily. Certificate validation is currently not configured on mesh endpoints, but it should be.
 ## Useful commands
 /usr/lib/perfsonar/bin/build_json -o /var/www/html/perfsonar_config.json perfsonar_config.conf
 ## Method for adding hosts to IP auth for esmond
