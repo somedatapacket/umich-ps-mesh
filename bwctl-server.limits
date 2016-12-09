@@ -4,7 +4,7 @@
 # Created on www-eng6.es.net by root at Sun Sep 11 13:59:47 PDT 2016
 #
 #
-# --CLASSCONFIGURATION--
+# --CLASSCONFIGURATION--	
 #
 limit root with \
         bandwidth=0, \
